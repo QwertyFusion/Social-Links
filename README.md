@@ -23,7 +23,7 @@ This project is open-source under the [MIT License](./LICENSE). Feel free to use
 
 <h2>Tools used</h2>
 <ol>
-  <li>Visual Studio Code (Version: 1.85.1)</li>
+  <li>Visual Studio Code</li>
   <li>HTML</li>
   <li>CSS</li>
   <li>Netlify</li>
