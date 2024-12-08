@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>QwertyFusion | Social Links</title>
+  <link rel="stylesheet" href="globals.css">
+</head>
+
+<body>
+  <div class="container">
+    <img src="assets/images/avatar.png" alt="Rishi Banerjee" />
+    <h1>Rishi Banerjee<span>AKA QwertyFusion</span></h1>
+
+    <p>Art, Branding, UI/UX Design, Web Development, Java Development, Gaming, Game Development, Cats</p>
+
+    <ul>
+      <li><button onclick="window.open('https://github.com/QwertyFusion', '_blank')">GitHub</button></li>
+      <li><button onclick="window.open('https://www.linkedin.com/in/mr-rishi-banerjee/', '_blank')">LinkedIn</button>
+      </li>
+      <li><button onclick="window.open('https://x.com/QwertyFusion', '_blank')">Twitter</button></li>
+      <li><button onclick="window.open('https://www.instagram.com/rishi._.banerjee', '_blank')">Instagram</button></li>
+      <li><button onclick="window.open('https://dribbble.com/QwertyFusion', '_blank')">Dribble</button></li>
+      <li><button onclick="window.open('https://steamcommunity.com/id/QwertyFusion/', '_blank')">Steam</button></li>
+    </ul>
+  </div>
+
+  <div class="attribution">
+    Coded by <a href="https://bento.me/rishi-banerjee" target="_blank" rel="noreferrer">QwertyFusion</a>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('ul button');
+
+    // Add an event listener for keyboard navigation
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Tab') {
+        // Prevent default Tab behavior when focusing buttons
+        event.preventDefault();
+
+        // Get the currently focused element
+        const focusedElement = document.activeElement;
+        const index = Array.from(buttons).indexOf(focusedElement);
+
+        if (event.shiftKey) {
+          // Shift+Tab: Move focus backward
+          const prevIndex = (index === 0) ? buttons.length - 1 : index - 1;
+          buttons[prevIndex].focus();
+        } else {
+          // Tab: Move focus forward
+          const nextIndex = (index === buttons.length - 1) ? 0 : index + 1;
+          buttons[nextIndex].focus();
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
