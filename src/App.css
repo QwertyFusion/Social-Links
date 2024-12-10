@@ -1,0 +1,120 @@
+@font-face {
+  font-family: Inter;
+  src: url(/public/assets/fonts/static/Inter-Regular.ttf) format("ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+body {
+  opacity: 1;
+  background-image: linear-gradient(135deg, #1f1f1f 25%, transparent 25%), linear-gradient(225deg, #1f1f1f 25%, transparent 25%), linear-gradient(45deg, #1f1f1f 25%, transparent 25%), linear-gradient(315deg, #1f1f1f 25%, #141414 25%);
+  background-position: 6px 0, 6px 0, 0 0, 0 0;
+  background-size: 6px 6px;
+  background-repeat: repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  background-color: hsl(0, 0%, 12%);
+  max-width: 450px;
+  padding: 2.5rem;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+  
+}
+
+.container h1 {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+.container h1 span {
+  color: #FF4C29;
+  display: block;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.container p {
+  color: hsl(0, 0%, 75%);
+  text-align: center;
+  font-size: 14px;
+}
+
+.container ul {
+  list-style-type: none;
+  display: grid;
+  grid-column: 1;
+  grid-area: 5;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.container ul button {
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: crosshair;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.container ul button:focus {
+  outline: 2px solid #FF4C29;
+  outline-offset: 2px;
+}  
+
+.container ul button:hover {
+  background-color: #FF4C29;
+  color: hsl(0, 0%, 20%);
+}
+
+.attribution {
+  max-width: 450px;
+  font-size: 13px;
+  text-align: center;
+  margin: 1rem;
+  color: hsl(0, 0%, 75%);
+}
+
+.attribution a {
+  color: #FF4C29;
+  text-underline-offset: 4px;
+  font-weight: bold;
+  transition: all 0.15s ease-in-out;
+  cursor: crosshair;
+}
+
+.attribution a:hover {
+  color: hsl(0, 0%, 8%);
+  text-underline-offset: -13px;
+  background-color: #FF4C29;
+}
+
