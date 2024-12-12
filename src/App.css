@@ -33,8 +33,8 @@ body {
 }
 
 .container #profilePic {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: auto;
   border-radius: 50%;
   display: block;
   margin-inline: auto;

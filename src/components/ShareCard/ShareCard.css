@@ -1,3 +1,37 @@
+#ShareToggleContainer {
+  margin: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+#ShareToggle {
+  color: hsl(0, 0%, 100%);
+  width: 30px;
+  height: 30px;
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: crosshair;
+  transition: all 0.15s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+#ShareToggle:hover {
+  color: hsl(0, 0%, 12%);
+  background-color: #FF4C29;
+}
+
+.icon {
+  width: 16px;
+  height: auto;
+  stroke-width: 2px;
+}
+
 #shareCard {
     position: fixed;
     z-index: 1; 
@@ -10,7 +44,7 @@
     align-items: center;
     flex-direction: column;
     overflow: auto;
-    background-color: rgba(189, 11, 11, 0.185);
+    background-color: rgba(0, 0, 0, 0.5);
     animation-name: animateShareCard;
     animation-duration: 0.5s;
 }
@@ -27,11 +61,37 @@
 
 #shareCard .content {
   background-color: hsl(0, 0%, 12%);
-  max-width: 450px;
+  max-width: 450px; /* Maximum width */
+  width: 100%; /* Take full width available */
   padding: 1rem;
-  margin: 1rem;
+  margin: 0 1rem; /* 1rem margin on left and right */
   border-radius: 10px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.wrapper {
+  background-color: hsl(0, 0%, 20%);
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.wrapper .profile {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .qr-container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  width: 45%;
 }
 
 .header {
@@ -56,6 +116,7 @@
   border: none;
   cursor: crosshair;
   transition: all 0.15s ease-in-out;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .close-button:hover {
@@ -65,7 +126,7 @@
 } 
 
 .header h2 {
-  color: #FF4C29;
+  color: white;
   display: block;
   font-size: 1rem;
 }
@@ -76,8 +137,8 @@
 }
 
 .body #profilePic {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: auto;
     border-radius: 50%;
     display: block;
     margin-inline: auto;
@@ -96,33 +157,38 @@
     display: block;
     font-size: 1rem;
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+}
+
+#qr {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  cursor: crosshair;
+}
+
+.qr-container:hover {
+  background-color: hsl(0, 0%, 75%);
 }
 
 .copy-link {
   --height: 36px;
 
   display: flex;
-  max-width: 250px;
 }
 
 .copy-link-input {
   flex-grow: 1;
-  padding: 0 8px;
+  padding: 0 10px;
   font-size: 14px;
-  border: 1px solid orangered;
-  background-color: black;
+  border: none;
+  background-color: hsl(0, 0%, 20%);
   color: white;
   border-radius: 10px 0 0 10px;
   border-right: none;
   outline: none;
-  cursor: default;
   height: var(--height);
-}
-
-.copy-link-input:hover {
-  background-color: antiquewhite;
-}
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+} 
 
 .copy-link-button {
   flex-shrink: 0;
@@ -131,15 +197,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid orangered;
+  border: none;
   background-color: orangered;
   color: white;
   border-radius: 0 10px 10px 0;
   border-right: none;
   outline: none;
   cursor: crosshair;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .copy-link-button:hover {
-  background-color: white;
+  background-color: #be361b;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 }

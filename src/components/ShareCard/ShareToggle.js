@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Share2 } from "lucide-react";
 import { ShareCard } from "./ShareCard";
 
 export const ShareToggle = () => {
@@ -9,8 +10,10 @@ export const ShareToggle = () => {
   }
 
   return (
-    <div className="ShareToggleButtonContainer">
-      <button onClick={handleToggleShareCardPopup}>O</button>
+    <div id="ShareToggleContainer">
+      <button id="ShareToggle" onClick={handleToggleShareCardPopup}>
+        <Share2 className="icon" />
+      </button>
       {showShareCard && <ShareCard onClose={handleToggleShareCardPopup} />}
     </div>
   );

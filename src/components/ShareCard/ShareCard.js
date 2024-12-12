@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { X } from "lucide-react";
 import "./ShareCard.css";
 
 export const ShareCard = ({ onClose }) => {
@@ -27,14 +28,14 @@ export const ShareCard = ({ onClose }) => {
     <div id="shareCard">
       <div className="content">
         <div className="header">
-          <h2>Share QwertyFusion's Link Tree</h2>
+          <h2>Share Link Tree</h2>
           <button onClick={onClose} className="close-button">
-            &times;
+            <X className="icon" />
           </button>
         </div>
         <div className="body">
           <div className="wrapper">
-            <div className="content">
+            <div className="profile">
               <img
                 id="profilePic"
                 src={process.env.PUBLIC_URL + "/assets/images/avatar.png"}
@@ -43,6 +44,18 @@ export const ShareCard = ({ onClose }) => {
               <h2>
                 Rishi Banerjee<span>AKA QwertyFusion</span>
               </h2>
+            </div>
+            <div className="qr-container">
+              <a
+                href={process.env.PUBLIC_URL + "/assets/images/qr.png"}
+                download="QwertyFusion_QR.png"
+              >
+                <img
+                  id="qr"
+                  src={process.env.PUBLIC_URL + "/assets/images/qr.png"}
+                  alt="Rishi Banerjee"
+                />
+              </a>
             </div>
           </div>
           <div className="copy-link">
