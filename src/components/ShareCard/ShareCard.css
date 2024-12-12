@@ -1,0 +1,145 @@
+#shareCard {
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+    background-color: rgba(189, 11, 11, 0.185);
+    animation-name: animateShareCard;
+    animation-duration: 0.5s;
+}
+
+/* @keyframes animateShareCard {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+} */
+
+#shareCard .content {
+  background-color: hsl(0, 0%, 12%);
+  max-width: 450px;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+    padding: 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-button {
+  font-size: 24px;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  width: 30px;
+  height: 30px;
+  background-color: hsl(0, 0%, 20%);
+  float: right;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: crosshair;
+  transition: all 0.15s ease-in-out;
+}
+
+.close-button:hover {
+  color: hsl(0, 0%, 12%);
+  background-color: #FF4C29;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+} 
+
+.header h2 {
+  color: #FF4C29;
+  display: block;
+  font-size: 1rem;
+}
+
+.body {
+    width: 100%;
+    display: block;
+}
+
+.body #profilePic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 1.25rem;
+    
+  }
+
+.body h2 {
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+  }
+  
+.body h2 span {
+    color: #FF4C29;
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.copy-link {
+  --height: 36px;
+
+  display: flex;
+  max-width: 250px;
+}
+
+.copy-link-input {
+  flex-grow: 1;
+  padding: 0 8px;
+  font-size: 14px;
+  border: 1px solid orangered;
+  background-color: black;
+  color: white;
+  border-radius: 10px 0 0 10px;
+  border-right: none;
+  outline: none;
+  cursor: default;
+  height: var(--height);
+}
+
+.copy-link-input:hover {
+  background-color: antiquewhite;
+}
+
+.copy-link-button {
+  flex-shrink: 0;
+  height: var(--height);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid orangered;
+  background-color: orangered;
+  color: white;
+  border-radius: 0 10px 10px 0;
+  border-right: none;
+  outline: none;
+  cursor: crosshair;
+}
+
+.copy-link-button:hover {
+  background-color: white;
+}

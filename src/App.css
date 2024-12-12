@@ -32,7 +32,7 @@ body {
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-.container img {
+.container #profilePic {
   width: 80px;
   height: 80px;
   border-radius: 50%;

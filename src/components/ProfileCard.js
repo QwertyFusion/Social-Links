@@ -1,12 +1,14 @@
-import React from 'react'
-import { Profile } from './Profile'
-import { LinksList } from './LinksList'
+import React from "react";
+import { Profile } from "./Profile";
+import { LinksList } from "./LinksList";
+import { ShareToggle } from "./ShareCard/ShareToggle";
 
 export const ProfileCard = () => {
   return (
-    <div className='container'>
+    <div className="container">
+      <ShareToggle />
       <Profile />
       <LinksList />
     </div>
-  )
-}
+  );
+};
