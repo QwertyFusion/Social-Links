@@ -26,6 +26,11 @@
   background-color: #FF4C29;
 }
 
+#ShareToggle:focus {
+  outline: 2px solid #FF4C29;
+  outline-offset: 2px;
+}  
+
 .icon {
   width: 16px;
   height: auto;
@@ -61,10 +66,9 @@
 
 #shareCard .content {
   background-color: hsl(0, 0%, 12%);
-  max-width: 450px; /* Maximum width */
-  width: 100%; /* Take full width available */
+  max-width: 450px;
   padding: 1rem;
-  margin: 0 1rem; /* 1rem margin on left and right */
+  margin: 0 1rem;
   border-radius: 10px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 }
@@ -77,6 +81,7 @@
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -92,6 +97,21 @@
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
   width: 45%;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-container:hover {
+  background-color: hsl(0, 0%, 75%);
+}
+
+.qr-container a:focus {
+  background-color: hsl(0, 0%, 75%);
+  outline: 2px solid #FF4C29;
+  outline-offset: 2px;
+  border-radius: 10px;
 }
 
 .header {
@@ -124,6 +144,11 @@
   background-color: #FF4C29;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 } 
+
+.close-button:focus {
+  outline: 2px solid #FF4C29;
+  outline-offset: 2px;
+}  
 
 .header h2 {
   color: white;
@@ -164,10 +189,6 @@
   height: auto;
   display: block;
   cursor: crosshair;
-}
-
-.qr-container:hover {
-  background-color: hsl(0, 0%, 75%);
 }
 
 .copy-link {
@@ -211,3 +232,8 @@
   background-color: #be361b;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 }
+
+.copy-link-button:focus {
+  outline: 2px solid #FF4C29;
+  outline-offset: 2px;
+}  
