@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
-import { X } from "lucide-react";
+import React, { useRef, useState } from "react";
+import { Check, Copy, X } from "lucide-react";
 import "./ShareCard.css";
 
 export const ShareCard = ({ onClose }) => {
   const inputRef = useRef(null);
+  const [buttonText, setButtonText] = useState(<Copy className="icon" />);
 
   const handleFocus = () => {
     if (inputRef.current) {
@@ -16,8 +17,12 @@ export const ShareCard = ({ onClose }) => {
       try {
         // Use the Clipboard API to write the text to the clipboard
         await navigator.clipboard.writeText(inputRef.current.value);
-        // Optionally, show a message to indicate that the text has been copied
-        alert("Link copied to clipboard!");
+        setButtonText(<Check className="icon" />);
+
+        // Reset the button text after 2 seconds
+        setTimeout(() => {
+          setButtonText(<Copy className="icon" />);
+        }, 2000);
       } catch (err) {
         console.error("Failed to copy: ", err);
       }
@@ -74,7 +79,7 @@ export const ShareCard = ({ onClose }) => {
               className="copy-link-button"
               onClick={handleCopy}
             >
-              Copy
+              {buttonText}
             </button>
           </div>
         </div>
