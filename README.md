@@ -7,7 +7,7 @@ Welcome to the **QwertyFusion LinkTree** repository! This project is a simple, s
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/030b7571-764c-42e1-805c-e0eef3f88b93/deploy-status)](https://app.netlify.com/sites/qwertyfusion-link-tree/deploys)
 <br />
-View the live website at [https://qwertyfusion-linktree.netlify.app](https://qwertyfusion-linktree.netlify.app).
+View the live website at [https://qwertyfusion-link-tree.netlify.app](https://qwertyfusion-link-tree.netlify.app).
 
 ## Features
 
